@@ -1,5 +1,5 @@
 import json
-from lib.dbengine import DBEngine
+from .lib.dbengine import DBEngine
 import re
 import numpy as np
 #from nltk.tokenize import StanfordTokenizer
