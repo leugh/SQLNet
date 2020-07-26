@@ -231,9 +231,9 @@ class SQLNet(nn.Module):
 
     def check_acc(self, vis_info, pred_queries, gt_queries, pred_entry):
         def pretty_print(vis_data):
-            print 'question:', vis_data[0]
-            print 'headers: (%s)'%(' || '.join(vis_data[1]))
-            print 'query:', vis_data[2]
+            print('question:', vis_data[0])
+            print('headers: (%s)' % (' || '.join(vis_data[1])))
+            print('query:', vis_data[2])
 
         def gen_cond_str(conds, header):
             if len(conds) == 0:

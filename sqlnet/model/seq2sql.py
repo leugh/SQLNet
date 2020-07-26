@@ -199,9 +199,9 @@ class Seq2SQL(nn.Module):
 
     def check_acc(self, vis_info, pred_queries, gt_queries, pred_entry):
         def pretty_print(vis_data):
-            print 'question:', vis_data[0]
-            print 'headers: (%s)'%(' || '.join(vis_data[1]))
-            print 'query:', vis_data[2]
+            print('question:', vis_data[0])
+            print('headers: (%s)' % (' || '.join(vis_data[1])))
+            print('query:', vis_data[2])
 
         def gen_cond_str(conds, header):
             if len(conds) == 0:
@@ -349,7 +349,7 @@ class Seq2SQL(nn.Module):
                         cond_toks.append(cond_val)
 
                 if verbose:
-                    print cond_toks
+                    print(cond_toks)
                 if len(cond_toks) > 0:
                     cond_toks = cond_toks[1:]
                 st = 0
