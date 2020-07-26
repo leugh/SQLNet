@@ -4,10 +4,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
 import numpy as np
-from modules.word_embedding import WordEmbedding
-from modules.aggregator_predict import AggPredictor
-from modules.selection_predict import SelPredictor
-from modules.sqlnet_condition_predict import SQLNetCondPredictor
+from sqlnet.model.modules.word_embedding import WordEmbedding
+from sqlnet.model.modules.aggregator_predict import AggPredictor
+from sqlnet.model.modules.selection_predict import SelPredictor
+from sqlnet.model.modules.sqlnet_condition_predict import SQLNetCondPredictor
 
 
 class SQLNet(nn.Module):
