@@ -35,23 +35,35 @@ def check_and_add(tok):
         word_num += 1
         embs.append(word_emb[tok])
 
+
+print("processing sql_data")
 for sql in sql_data:
     for tok in sql['question_tok']:
         check_and_add(tok)
+
+print("processing table_data")
 for tab in table_data.values():
     for col in tab['header_tok']:
         for tok in col:
             check_and_add(tok)
+
+print("processing val_sql_data")
 for sql in val_sql_data:
     for tok in sql['question_tok']:
         check_and_add(tok)
+
+print("processing val_table_data")
 for tab in val_table_data.values():
     for col in tab['header_tok']:
         for tok in col:
             check_and_add(tok)
+
+print("processing test_sql_data")
 for sql in test_sql_data:
     for tok in sql['question_tok']:
         check_and_add(tok)
+
+print("processing test_table_data")
 for tab in test_table_data.values():
     for col in tab['header_tok']:
         for tok in col:
