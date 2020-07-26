@@ -19,8 +19,12 @@ else:
 sql_data, table_data, val_sql_data, val_table_data,\
         test_sql_data, test_table_data, TRAIN_DB, DEV_DB, TEST_DB = \
         load_dataset(0, use_small=USE_SMALL)
+"""
 word_emb = load_word_emb('glove/glove.%dB.%dd.txt'%(B_word,N_word),
         use_small=USE_SMALL)
+"""
+word_emb = load_glove_model('glove/glove.{}B.{}d.txt'.format(B_word, N_word))
+
 print("Length of word vocabulary: %d" % len(word_emb))
 
 word_to_idx = {'<UNK>':0, '<BEG>':1, '<END>':2}

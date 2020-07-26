@@ -266,6 +266,21 @@ def epoch_reinforce_train(model, optimizer, batch_size, sql_data, table_data, db
     return cum_reward / len(sql_data)
 
 
+# https://stackoverflow.com/questions/37793118/load-pretrained-glove-vectors-in-python
+def load_glove_model(file):
+    print("Loading Glove Model")
+    f = open(file, 'r')
+
+    glove_model = {}
+    for line in f:
+        split_lines = line.split()
+        word = split_lines[0]
+        word_embedding = np.array([float(value) for value in split_lines[1:]])
+        glove_model[word] = word_embedding
+    print(len(glove_model), " words loaded!")
+    return glove_model
+
+
 def load_word_emb(file_name, load_used=False, use_small=False):
     if not load_used:
         print('Loading word embedding from %s'%file_name)
