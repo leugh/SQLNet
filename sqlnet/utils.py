@@ -273,7 +273,6 @@ def load_glove_model(file):
 
     glove_model = {}
     for idx, line in enumerate(f):
-        print(idx)
         split_lines = line.split()
         word = split_lines[0]
         word_embedding = np.array([float(value) for value in split_lines[1:]])
