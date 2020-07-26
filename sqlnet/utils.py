@@ -272,6 +272,7 @@ def load_word_emb(file_name, load_used=False, use_small=False):
         ret = {}
         with open(file_name) as inf:
             for idx, line in enumerate(inf):
+                print(idx)
                 if (use_small and idx >= 5000):
                     break
                 info = line.strip().split(' ')
