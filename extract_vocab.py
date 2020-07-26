@@ -62,4 +62,4 @@ print("Length of used word vocab: %s" % len(word_to_idx))
 emb_array = np.stack(embs, axis=0)
 with open('glove/word2idx.json', 'w') as outf:
     json.dump(word_to_idx, outf)
-np.save(open('glove/usedwordemb.npy', 'w'), emb_array)
+np.save('glove/usedwordemb.npy', emb_array)
