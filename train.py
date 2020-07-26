@@ -1,8 +1,8 @@
 import json
 import torch
-from .sqlnet.utils import *
-from .sqlnet.model.seq2sql import Seq2SQL
-from .sqlnet.model.sqlnet import SQLNet
+from sqlnet.utils import *
+from sqlnet.model.seq2sql import Seq2SQL
+from sqlnet.model.sqlnet import SQLNet
 import numpy as np
 import datetime
 
