@@ -62,7 +62,7 @@ if __name__ == '__main__':
         model.agg_embed_layer.load_state_dict(torch.load(agg_e))
         print("Loading from %s" % sel_e)
         model.sel_embed_layer.load_state_dict(torch.load(sel_e))
-        print "Loading from %s"%cond_e
+        print("Loading from %s" % cond_e)
         model.cond_embed_layer.load_state_dict(torch.load(cond_e))
     else:
         agg_m, sel_m, cond_m = best_model_name(args)
